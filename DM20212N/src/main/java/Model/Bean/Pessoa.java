@@ -1,15 +1,14 @@
-package model.bean;
+package Model.Bean;
 
 public class Pessoa {
     private int id;
     private String nome;
     private int idade;
-    private float altura;
+    private double altura;
     private String genero;
-    private float peso;
+    private double peso;
 
-    public Pessoa(int id, String nome, int idade, float altura, String genero, float peso)
-    {
+    public Pessoa(int id, String nome, int idade, double altura, String genero, double peso) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
@@ -18,6 +17,15 @@ public class Pessoa {
         this.peso = peso;
     }
 
+    public Pessoa(String nome, int idade, double altura, String genero, double peso) {
+        this.nome = nome;
+        this.idade = idade;
+        this.altura = altura;
+        this.genero = genero;
+        this.peso = peso;
+    }
+
+    public Pessoa(){}
 
     public int getId() {
         return id;
@@ -43,11 +51,11 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public float getAltura() {
+    public double getAltura() {
         return altura;
     }
 
-    public void setAltura(float altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
 
@@ -59,11 +67,11 @@ public class Pessoa {
         this.genero = genero;
     }
 
-    public float getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(float peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 
