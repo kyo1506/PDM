@@ -1,7 +1,5 @@
 plugins {
     id 'java'
-    id 'checkstyle'
-    id 'pmd'
 }
 
 group 'poo.ads.fateczs'
@@ -13,23 +11,16 @@ repositories {
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.5.6.Final'
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    annotationProcessor('org.hibernate:hibernate-jpamodelgen:5.5.6.Final')
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    testCompileOnly 'org.projectlombok:lombok:1.18.20'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
 }
 
 test {
     useJUnitPlatform()
-}
-
-checkstyle{
-    toolVersion = '8.44'
-    showViolations = true
-    configFile = file("config/checkstyle/checkstyle.xml")
-}
-
-pmd{
-    ruleSetFiles = files("config/pmd/ruleset.xml")
-    toolVersion = '6.36.0'
-    ignoreFailures = true
-    consoleOutput = true
 }
