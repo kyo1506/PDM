@@ -12,7 +12,7 @@ public class EstadoController {
         estadoDAO.insertOrUpdate(estado);
     }
 
-    public Estado buscar (int id)
+    public Estado buscar (Long id)
     {
         return estadoDAO.getById(id);
     }
@@ -21,7 +21,7 @@ public class EstadoController {
         return estadoDAO.list();
     }
 
-    public void excluir (int id) {
+    public void excluir (Long id) {
         estadoDAO.delete(id);
     }
 }

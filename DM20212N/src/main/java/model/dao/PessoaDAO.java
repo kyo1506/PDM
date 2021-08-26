@@ -3,39 +3,39 @@ package model.dao;
 import java.util.List;
 
 import connection.ConnectionFactory;
-import model.bean.Aluno;
-import model.bean.Aluno_;
+import model.bean.Pessoa;
+import model.bean.Pessoa_;
 
 import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-public class AlunoDAO{
+public class PessoaDAO {
 
     private static EntityManager entityManager = ConnectionFactory.getEntityManager();
 
-    public List<Aluno> list() {
-        CriteriaQuery<Aluno> criteriaQueryList = entityManager.getCriteriaBuilder().createQuery(Aluno.class);
-        Root<Aluno> alunoRootList = criteriaQueryList.from(Aluno.class);
+    public List<Pessoa> list() {
+        CriteriaQuery<Pessoa> criteriaQueryList = entityManager.getCriteriaBuilder().createQuery(Pessoa.class);
+        Root<Pessoa> pessoaRootList = criteriaQueryList.from(Pessoa.class);
 
         return entityManager.createQuery(criteriaQueryList).getResultList();
     }
 
-    public Aluno getById(int id) {
-        CriteriaQuery<Aluno> criteriaQuery = entityManager.getCriteriaBuilder().createQuery(Aluno.class);
-        Root<Aluno> alunoRoot = criteriaQuery.from(Aluno.class);
-        CriteriaBuilder.In<Integer> inClause = entityManager.getCriteriaBuilder().in(alunoRoot.get(Aluno_.id));
+    public Pessoa getById(Long id) {
+        CriteriaQuery<Pessoa> criteriaQuery = entityManager.getCriteriaBuilder().createQuery(Pessoa.class);
+        Root<Pessoa> pessoaRoot = criteriaQuery.from(Pessoa.class);
+        CriteriaBuilder.In<Long> inClause = entityManager.getCriteriaBuilder().in(pessoaRoot.get(Pessoa_.id));
         inClause.value(id);
-        criteriaQuery.select(alunoRoot).where(inClause);
+        criteriaQuery.select(pessoaRoot).where(inClause);
 
         return entityManager.createQuery(criteriaQuery).getSingleResult();
     }
 
-    public void insertOrUpdate (Aluno aluno) {
+    public void insertOrUpdate (Pessoa pessoa) {
         try{
             entityManager.getTransaction().begin();
-            entityManager.persist(aluno);
+            entityManager.persist(pessoa);
             entityManager.getTransaction().commit();
         }
         catch(Exception ex)
@@ -44,11 +44,11 @@ public class AlunoDAO{
         }
     }
 
-    public void delete (int id) {
-        Aluno aluno = getById(id);
+    public void delete (Long id) {
+        Pessoa pessoa = getById(id);
         try{
             entityManager.getTransaction().begin();
-            entityManager.persist(aluno);
+            entityManager.remove(pessoa);
             entityManager.getTransaction().commit();
         }
         catch(Exception ex)

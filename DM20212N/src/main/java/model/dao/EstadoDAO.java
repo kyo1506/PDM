@@ -21,10 +21,10 @@ public class EstadoDAO {
         return entityManager.createQuery(criteriaQueryList).getResultList();
     }
 
-    public Estado getById(int id) {
+    public Estado getById(Long id) {
         CriteriaQuery<Estado> criteriaQuery = entityManager.getCriteriaBuilder().createQuery(Estado.class);
         Root<Estado> estadoRoot = criteriaQuery.from(Estado.class);
-        CriteriaBuilder.In<Integer> inClause = entityManager.getCriteriaBuilder().in(estadoRoot.get(Estado_.id));
+        CriteriaBuilder.In<Long> inClause = entityManager.getCriteriaBuilder().in(estadoRoot.get(Estado_.id));
         inClause.value(id);
         criteriaQuery.select(estadoRoot).where(inClause);
 
@@ -43,11 +43,11 @@ public class EstadoDAO {
         }
     }
 
-    public void delete (int id) {
+    public void delete (Long id) {
         Estado estado = getById(id);
         try{
             entityManager.getTransaction().begin();
-            entityManager.persist(estado);
+            entityManager.remove(estado);
             entityManager.getTransaction().commit();
         }
         catch(Exception ex)

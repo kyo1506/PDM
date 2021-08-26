@@ -4,19 +4,20 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Getter
 @Setter
-public class Estado {
+public class Estado implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column(nullable = false)
+    private Long id;
+    @Column(name = "nome", nullable = false)
     private String nome;
-    @Column(nullable = false)
+    @Column(name = "sigla", nullable = false)
     private String sigla;
 
     @OneToMany(
@@ -25,16 +26,25 @@ public class Estado {
             orphanRemoval = true
     )
 
-    private List<Aluno> alunos = new ArrayList<>();
+    private List<Pessoa> pessoas = new ArrayList<>();
 
     public Estado(){}
     public Estado(String nome, String sigla) {
         this.nome = nome;
         this.sigla = sigla;
     }
-    public Estado(int id, String nome, String sigla) {
+    public Estado(Long id, String nome, String sigla) {
         this.id = id;
         this.nome = nome;
         this.sigla = sigla;
+    }
+
+    @Override
+    public String toString() {
+        return "Estado{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", sigla='" + sigla + '\'' +
+                '}';
     }
 }

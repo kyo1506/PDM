@@ -1,12 +1,14 @@
 package view;
 
+import controller.PessoaController;
 import controller.EstadoController;
+import model.bean.Pessoa;
 import model.bean.Estado;
 
 import javax.swing.*;
-import java.util.List;
 
-public class EstadoView {
+public class PessoaView {
+    static PessoaController pessoaController = new PessoaController();
     static EstadoController estadoController = new EstadoController();
     public static void mostrarTela() {
 
@@ -36,41 +38,48 @@ public class EstadoView {
 
     static void inserir() {
         String nome = JOptionPane.showInputDialog("NOME");
-        String sigla = JOptionPane.showInputDialog("SIGLA");
-        estadoController.inserir(new Estado(nome, sigla));
+        int idade = Integer.parseInt(JOptionPane.showInputDialog("IDADE"));
+        Long estado = Long.parseLong(JOptionPane.showInputDialog("ESTADO"));
+        pessoaController.inserir(new Pessoa(nome, idade, estadoController.buscar(estado)));
         JOptionPane.showMessageDialog(null, "Cadastrado com sucesso!");
     }
 
     static void buscar() {
         Long id = Long.parseLong(JOptionPane.showInputDialog("ID"));
-        JOptionPane.showMessageDialog(null,  estadoController.buscar(id));
+        JOptionPane.showMessageDialog(null, pessoaController.buscar(id));
     }
 
     static void listar() {
-        JOptionPane.showMessageDialog(null, estadoController.listar());
+        JOptionPane.showMessageDialog(null, pessoaController.listar());
     }
 
     static void alterar() {
         Long id = Long.parseLong(JOptionPane.showInputDialog("ID"));
-        Estado estado = estadoController.buscar(id);
+        Pessoa pessoa = pessoaController.buscar(id);
 
-        String nome = JOptionPane.showInputDialog("NOME", estado.getNome());
-        String sigla = JOptionPane.showInputDialog("SIGLA", estado.getSigla());
+        String nome = JOptionPane.showInputDialog("NOME", pessoa.getNome());
+        int idade = Integer.parseInt(JOptionPane.showInputDialog("IDADE", pessoa.getIdade()));
+        Long estado = Long.parseLong(JOptionPane.showInputDialog("ESTADO", pessoa.getEstado().getId()));
 
-        estado.setNome(nome);
-        estado.setSigla(sigla);
+        Estado buscarEstado = estadoController.buscar(estado);
 
-        estadoController.inserir(estado);
+        pessoa.setNome(nome);
+        pessoa.setIdade(idade);
+        pessoa.setEstado(buscarEstado);
+
+        pessoaController.inserir(pessoa);
+
+        JOptionPane.showMessageDialog(null, "Alterado com sucesso!");
     }
 
     static void excluir() {
         Long id = Long.parseLong(JOptionPane.showInputDialog("ID"));
         try{
-            estadoController.excluir(id);
+            pessoaController.excluir(id);
             JOptionPane.showMessageDialog(null, "Excluído com sucesso!");
         }catch(Exception e)
         {
-            JOptionPane.showMessageDialog(null, "Id do estado informado não encontrado.", "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "ID da pessoa informado não encontrado.", "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 }

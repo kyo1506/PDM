@@ -9,13 +9,13 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(Estado.class)
 public abstract class Estado_ {
 
+	public static volatile ListAttribute<Estado, Pessoa> pessoas;
 	public static volatile SingularAttribute<Estado, String> sigla;
-	public static volatile ListAttribute<Estado, Aluno> alunos;
 	public static volatile SingularAttribute<Estado, String> nome;
-	public static volatile SingularAttribute<Estado, Integer> id;
+	public static volatile SingularAttribute<Estado, Long> id;
 
+	public static final String PESSOAS = "pessoas";
 	public static final String SIGLA = "sigla";
-	public static final String ALUNOS = "alunos";
 	public static final String NOME = "nome";
 	public static final String ID = "id";
 
