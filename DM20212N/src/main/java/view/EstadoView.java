@@ -10,7 +10,7 @@ public class EstadoView {
     static EstadoController estadoController = new EstadoController();
     public static void mostrarTela() {
 
-        int ops = Integer.parseInt(JOptionPane.showInputDialog("1 - INSERIR, 2 - BUSCAR POR ID, 3 - LISTAR, 4 - ALTERAR, 5 - EXCLUIR"));
+        int ops = Integer.parseInt(JOptionPane.showInputDialog("1 - INSERIR, 2 - BUSCAR POR ID, 3 - LISTAR, 4 - ALTERAR, 5 - EXCLUIR, 6 - SAIR"));
 
         switch (ops)
         {
@@ -29,6 +29,8 @@ public class EstadoView {
             case 5:
                 excluir();
                 break;
+            case 6:
+                return;
             default:
                 break;
         }
