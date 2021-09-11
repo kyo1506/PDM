@@ -24,23 +24,14 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("com.dio.live"))
                 .paths(PathSelectors.ant("/**"))
                 .build()
-                .apiInfo(apiInfo())
-                .globalOperationParameters(
-                        Collections.singletonList(
-                                new ParameterBuilder()
-                                        .name("Authorization")
-                                        .description("Header para Token JWT")
-                                        .modelRef(new ModelRef("string"))
-                                        .parameterType("header")
-                                        .required(false)
-                                        .build()));
+                .apiInfo(apiInfo());
     }
 
     @Bean
     public ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("API-REST")
-                .description(" super live code")
+                .description("super live code")
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
