@@ -27,6 +27,10 @@
         <module name="DM20212N.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="16" />
+    <bytecodeTargetLevel target="16">
+      <module name="interface-app" target="1.8" />
+      <module name="interface-app.main" target="1.8" />
+      <module name="interface-app.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
