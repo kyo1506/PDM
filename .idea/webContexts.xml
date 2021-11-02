@@ -4,6 +4,9 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/interface-app/src/main/webapp/index.jsp" value="file://$PROJECT_DIR$/interface-app/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/interface-app/src/main/webapp/process/login-process.jsp" value="file://$PROJECT_DIR$/interface-app/src/main/webapp/process" />
+        <entry key="file://$PROJECT_DIR$/interface-app/src/main/webapp/process/usuario/adicionar-chat-usuario.jsp" value="file://$PROJECT_DIR$/interface-app/src/main/webapp/process/usuario" />
+        <entry key="file://$PROJECT_DIR$/interface-app/web/index.jsp" value="file://$PROJECT_DIR$/interface-app/web" />
       </map>
     </option>
   </component>

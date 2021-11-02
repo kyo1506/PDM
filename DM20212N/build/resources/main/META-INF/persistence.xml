@@ -9,8 +9,9 @@
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>model.bean.Pessoa</class>
-        <class>model.bean.Estado</class>
+        <class>model.bean.Autor</class>
+        <class>model.bean.Livro</class>
+        <class>model.bean.UserAuth</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/pdm_database?createDatabaseIfNotExist=true"/>
