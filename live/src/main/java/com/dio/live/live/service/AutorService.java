@@ -15,7 +15,6 @@ public class AutorService {
     AutorRepository autorRepository;
 
     public ResponseEntity<Object> createAutor(Autor model)  {
-
         Autor autor = new Autor();
         autor.setNome(model.getNome());
         autor.setLivros(model.getLivros());

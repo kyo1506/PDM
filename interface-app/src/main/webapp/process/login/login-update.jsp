@@ -17,6 +17,6 @@
     userAuth.setUsername(username);
     userAuth.setPassword(password);
 
-    userAuthController.insertOrUpdate(userAuth);
+    userAuthController.updateUser(userAuth);
     response.sendRedirect("../../jsp/login/login.jsp");
 %>

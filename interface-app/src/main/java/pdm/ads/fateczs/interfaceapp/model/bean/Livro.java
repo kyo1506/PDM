@@ -19,13 +19,14 @@ public class Livro implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", updatable = false, nullable = false)
     private Long id;
-    @Column(name = "nome", nullable = false)
+    @Column(name = "nome", nullable = false, unique = true)
     private String nome;
-    @ManyToMany(targetEntity = Autor.class, cascade = {CascadeType.PERSIST, CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH} )
+    @ManyToMany(targetEntity = Autor.class, fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH})
     @JoinTable(
             name="livro_autores",
             joinColumns=
-            @JoinColumn( name="livro_id", referencedColumnName="id"),
-            inverseJoinColumns=@JoinColumn(name="autor_id", referencedColumnName="id"))
+            @JoinColumn( name="livro_id"),
+            inverseJoinColumns=@JoinColumn(name="autor_id"))
     private List<Autor> autores;
+    public Livro(String nome) { this.nome = nome; }
 }

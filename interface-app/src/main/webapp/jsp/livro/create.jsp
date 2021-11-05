@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -12,19 +11,10 @@
 <div class="container py-3">
     <jsp:include page="../common/navbar.jsp" />
     <main>
-        <form action="../../process/login/login-create.jsp" method="post">
+        <form action="../../process/livro/livro-create.jsp" method="post">
             <div class="mb-3">
-                <label for="inputEmail" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="inputEmail">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="inputUsername" class="form-label">Username</label>
-                <input type="text" class="form-control" id="inputUsername" name="inputUsername">
-            </div>
-            <div class="mb-3">
-                <label for="inputPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword" name="inputPassword">
+                <label for="inputNome" class="form-label">Nome do livro</label>
+                <input type="text" class="form-control" id="inputNome" name="inputNome">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

@@ -12,45 +12,63 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 public class UserAuthDAO {
-
-    private static EntityManager entityManager = ConnectionFactory.getEntityManager();
-
-    public List<UserAuth> listAll() {
-        CriteriaQuery<UserAuth> criteriaQueryList = entityManager.getCriteriaBuilder().createQuery(UserAuth.class);
-        Root<UserAuth> userAuthRootList = criteriaQueryList.from(UserAuth.class);
-
-        return entityManager.createQuery(criteriaQueryList).getResultList();
+    public List<UserAuth> listAll()  {
+        EntityManager entityManager = new ConnectionFactory().getConnection();
+        try {
+            CriteriaQuery<UserAuth> criteriaQueryList = entityManager.getCriteriaBuilder().createQuery(UserAuth.class);
+            Root<UserAuth> userAuthRootList = criteriaQueryList.from(UserAuth.class);
+            return entityManager.createQuery(criteriaQueryList).getResultList();
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return null;
+        }finally {
+            entityManager.close();
+        }
     }
-
     public UserAuth getByName(String name){
-        CriteriaQuery<UserAuth> criteriaQuery = entityManager.getCriteriaBuilder().createQuery(UserAuth.class);
-        Root<UserAuth> userAuthRoot = criteriaQuery.from(UserAuth.class);
-        CriteriaBuilder.In<String> inClause = entityManager.getCriteriaBuilder().in(userAuthRoot.get(UserAuth_.username));
-        inClause.value(name);
-        criteriaQuery.select(userAuthRoot).where(inClause);
-
+        EntityManager entityManager = new ConnectionFactory().getConnection();
         try {
+            CriteriaQuery<UserAuth> criteriaQuery = entityManager.getCriteriaBuilder().createQuery(UserAuth.class);
+            Root<UserAuth> userAuthRoot = criteriaQuery.from(UserAuth.class);
+            CriteriaBuilder.In<String> inClause = entityManager.getCriteriaBuilder().in(userAuthRoot.get(UserAuth_.username));
+            inClause.value(name);
+            criteriaQuery.select(userAuthRoot).where(inClause);
             return entityManager.createQuery(criteriaQuery).getSingleResult();
         }catch (NoResultException ex){
             return null;
+        }finally {
+            entityManager.close();
         }
     }
-
     public UserAuth getById(Long id) {
-        CriteriaQuery<UserAuth> criteriaQuery = entityManager.getCriteriaBuilder().createQuery(UserAuth.class);
-        Root<UserAuth> userAuthRoot = criteriaQuery.from(UserAuth.class);
-        CriteriaBuilder.In<Long> inClause = entityManager.getCriteriaBuilder().in(userAuthRoot.get(UserAuth_.id));
-        inClause.value(id);
-        criteriaQuery.select(userAuthRoot).where(inClause);
-
+        EntityManager entityManager = new ConnectionFactory().getConnection();
         try {
+            CriteriaQuery<UserAuth> criteriaQuery = entityManager.getCriteriaBuilder().createQuery(UserAuth.class);
+            Root<UserAuth> userAuthRoot = criteriaQuery.from(UserAuth.class);
+            CriteriaBuilder.In<Long> inClause = entityManager.getCriteriaBuilder().in(userAuthRoot.get(UserAuth_.id));
+            inClause.value(id);
+            criteriaQuery.select(userAuthRoot).where(inClause);
+            return entityManager.createQuery(criteriaQuery).getSingleResult();
+        }catch (NoResultException ex){
+            return null;
+        }finally {
+            entityManager.close();
+        }
+    }
+    public UserAuth getById(Long id, EntityManager entityManager) {
+        try {
+            CriteriaQuery<UserAuth> criteriaQuery = entityManager.getCriteriaBuilder().createQuery(UserAuth.class);
+            Root<UserAuth> userAuthRoot = criteriaQuery.from(UserAuth.class);
+            CriteriaBuilder.In<Long> inClause = entityManager.getCriteriaBuilder().in(userAuthRoot.get(UserAuth_.id));
+            inClause.value(id);
+            criteriaQuery.select(userAuthRoot).where(inClause);
             return entityManager.createQuery(criteriaQuery).getSingleResult();
         }catch (NoResultException ex){
             return null;
         }
     }
-
-    public void insertOrUpdate (UserAuth userAuth) {
+    public void insertUser (UserAuth userAuth) {
+        EntityManager entityManager = new ConnectionFactory().getConnection();
         try{
             entityManager.getTransaction().begin();
             entityManager.persist(userAuth);
@@ -59,12 +77,27 @@ public class UserAuthDAO {
         catch(Exception ex)
         {
             entityManager.getTransaction().rollback();
+        }finally {
+            entityManager.close();
         }
     }
-
+    public void updateUser (UserAuth userAuth) {
+        EntityManager entityManager = new ConnectionFactory().getConnection();
+        try{
+            entityManager.getTransaction().begin();
+            entityManager.merge(userAuth);
+            entityManager.getTransaction().commit();
+        }
+        catch(Exception ex)
+        {
+            entityManager.getTransaction().rollback();
+        }finally {
+            entityManager.close();
+        }
+    }
     public void deleteById (Long id) {
-        UserAuth userAuth = getById(id);
-
+        EntityManager entityManager = new ConnectionFactory().getConnection();
+        UserAuth userAuth = getById(id, entityManager);
         try{
             entityManager.getTransaction().begin();
             entityManager.remove(userAuth);
@@ -73,6 +106,8 @@ public class UserAuthDAO {
         catch(Exception ex)
         {
             entityManager.getTransaction().rollback();
+        }finally {
+            entityManager.close();
         }
     }
 }

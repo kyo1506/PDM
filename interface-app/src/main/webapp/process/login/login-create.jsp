@@ -10,6 +10,6 @@
 
     UserAuthController userAuthController = new UserAuthController();
 
-    userAuthController.insertOrUpdate(new UserAuth(email, username, password));
+    userAuthController.insertUser(new UserAuth(email, username, password));
     response.sendRedirect("../../jsp/login/login.jsp");
 %>

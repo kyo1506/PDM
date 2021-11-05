@@ -1,26 +1,26 @@
 <%@ page import="java.util.List" %>
-<%@ page import="pdm.ads.fateczs.interfaceapp.controller.UserAuthController" %>
-<%@ page import="pdm.ads.fateczs.interfaceapp.model.bean.UserAuth" %>
+<%@ page import="pdm.ads.fateczs.interfaceapp.model.bean.Livro" %>
+<%@ page import="pdm.ads.fateczs.interfaceapp.model.bean.Autor" %>
+<%@ page import="pdm.ads.fateczs.interfaceapp.controller.AutorController" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <html>
 <%
-    UserAuthController userAuthController = new UserAuthController();
-    List<UserAuth> userAuthList = userAuthController.listAll();
+    AutorController autorController = new AutorController();
+    List<Autor> autorList = autorController.listAll();
 %>
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <style>.hidetext { -webkit-text-security: disc; }</style>
     <script>
         function validate(){
             const search_input = document.getElementById("search-input");
 
             search_input.addEventListener("keydown", evt =>  {
-                let search_item;
                 let td_itens;
+                let search_item;
                 if (evt.key === "Enter") {
                     search_item = document.getElementById("search-input").value;
                     td_itens = document.querySelectorAll("table > tbody > tr > td:nth-child(2)");
@@ -51,26 +51,32 @@
         </div>
         <div class="table-responsive">
             <table class="table table-bordered">
-                <caption>List of Users</caption>
+                <caption>List of Books</caption>
                 <thead class="table-dark">
                 <tr>
                     <th>Id</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>E-mail</th>
+                    <th>Nome</th>
+                    <th>Livros</th>
                     <th>Ações</th>
                 </tr>
                 </thead>
                 <tbody>
-                <% for (UserAuth userAuth : userAuthList){ %>
+                <% for (Autor autor : autorList){ %>
                     <tr>
-                        <td><%= userAuth.getId() %></td>
-                        <td><%= userAuth.getUsername() %></td>
-                        <td class="hidetext"><%= userAuth.getPassword() %></td>
-                        <td><%= userAuth.getEmail() %></td>
+                        <td><%= autor.getId() %></td>
+                        <td><%= autor.getNome() %></td>
                         <td>
-                            <a class="btn btn-success" href="../../jsp/login/update.jsp?userId=<%= userAuth.getId() %>"><i class="fas fa-edit"></i></a>
-                            <a class="btn btn-danger" href="../../process/login/login-delete.jsp?userId=<%= userAuth.getId() %>"><i class="far fa-trash-alt"></i></a>
+                            <% if (autor.getLivros() != null){%>
+                                <ul class="list-group list-group-horizontal">
+                                <% for (Livro livro: autor.getLivros()){ %>
+                                    <li class="list-group-item"><%= livro.getNome() %></li>
+                                <% }%>
+                                </ul>
+                            <%}%>
+                        </td>
+                        <td>
+                            <a class="btn btn-success" href="../../jsp/autor/update.jsp?autorId=<%= autor.getId() %>"><i class="fas fa-edit"></i></a>
+                            <a class="btn btn-danger" href="../../process/autor/autor-delete.jsp?autorId=<%= autor.getId() %>"><i class="far fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 <%  } %>
