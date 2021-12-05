@@ -6,56 +6,33 @@
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64e7a9c8-1e49-4ef0-a48d-24d3e61ff960" name="Changes" comment="Commit final - Projeto Entregue">
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/assets/css/dropdown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/autor/autor.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/autor/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/autor/update.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/livro/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/livro/livro.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/livro/update.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/autor/autor-adicionar-livro.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/autor/autor-create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/autor/autor-delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/autor/autor-remover-livro.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/autor/autor-update.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/livro/livro-adicionar-autor.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/livro/livro-create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/livro/livro-delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/livro/livro-remover-autor.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/livro/livro-update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.jpb/jpb-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/controller/UserAuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/entity/UserAuth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/repository/UserAuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/service/UserAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PDM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PDM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/build/resources/main/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/build/resources/main/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/connection/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/connection/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/controller/AutorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/controller/LivroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/controller/UserAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/controller/UserAuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/bean/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/bean/Autor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/bean/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/bean/Livro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/dao/AutorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/dao/AutorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/dao/LivroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/dao/LivroDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/dao/UserAuthDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/java/pdm/ads/fateczs/interfaceapp/model/dao/UserAuthDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/autor/autores.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/common/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/common/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/common/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/common/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/livro/livros.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/login/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/login/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/jsp/login/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/webapp/process/login/login-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/login/login-create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface-app/src/main/webapp/process/login/login-update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/interface-app/src/main/webapp/process/login/login-update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/.gradle/7.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/live/.gradle/7.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/.gradle/7.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/live/.gradle/7.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/.gradle/7.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/live/.gradle/7.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/live/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/live/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/live/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/controller/AutorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/controller/LivroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/controller/LivroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/entity/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/entity/Autor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/entity/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/entity/Livro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/service/AutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/service/AutorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/service/LivroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/live/src/main/java/com/dio/live/live/service/LivroService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,10 +77,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JpaRepository" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -168,13 +146,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.JAVA_MODULE" value="16" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/interface-app/src/main/webapp/process/livro" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.14941406" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="advanced.settings" />
@@ -202,7 +180,7 @@
       <recent name="com.dio.live.live.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.54">
+  <component name="RunManager" selected="Spring Boot.LiveApplication">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="DM20212N.main" />
@@ -374,9 +352,7 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : pdm.ads.fateczs : interface-app-1.0-SNAPSHOT.war" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -452,7 +428,43 @@
       <workItem from="1636117797565" duration="4483000" />
       <workItem from="1636122333062" duration="9152000" />
       <workItem from="1636139693831" duration="6021000" />
-      <workItem from="1636153629131" duration="1509000" />
+      <workItem from="1636153629131" duration="1950000" />
+      <workItem from="1636293840217" duration="212000" />
+      <workItem from="1636376850367" duration="878000" />
+      <workItem from="1636377952555" duration="58000" />
+      <workItem from="1636378073808" duration="134000" />
+      <workItem from="1636379787990" duration="486000" />
+      <workItem from="1636399500455" duration="767000" />
+      <workItem from="1636400280225" duration="51000" />
+      <workItem from="1636400351530" duration="1836000" />
+      <workItem from="1636403992586" duration="944000" />
+      <workItem from="1636405961012" duration="144000" />
+      <workItem from="1636406125713" duration="593000" />
+      <workItem from="1636408065398" duration="139000" />
+      <workItem from="1636410436930" duration="2163000" />
+      <workItem from="1636413503618" duration="334000" />
+      <workItem from="1636413859787" duration="577000" />
+      <workItem from="1636414464359" duration="649000" />
+      <workItem from="1636575893832" duration="1005000" />
+      <workItem from="1637185348522" duration="14000" />
+      <workItem from="1637888217033" duration="336000" />
+      <workItem from="1637891071679" duration="34000" />
+      <workItem from="1638110602045" duration="316000" />
+      <workItem from="1638112053827" duration="602000" />
+      <workItem from="1638122307767" duration="5200000" />
+      <workItem from="1638205324123" duration="729000" />
+      <workItem from="1638315218614" duration="2000" />
+      <workItem from="1638377566395" duration="1428000" />
+      <workItem from="1638382805090" duration="3067000" />
+      <workItem from="1638394841155" duration="3913000" />
+      <workItem from="1638406569394" duration="2208000" />
+      <workItem from="1638460055559" duration="5401000" />
+      <workItem from="1638469412906" duration="1323000" />
+      <workItem from="1638491762845" duration="3708000" />
+      <workItem from="1638548960662" duration="22346000" />
+      <workItem from="1638611595287" duration="599000" />
+      <workItem from="1638700994647" duration="3468000" />
+      <workItem from="1638719600611" duration="4218000" />
     </task>
     <task id="LOCAL-00001" summary="Add Project API RESTful">
       <created>1631321904946</created>
@@ -503,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635813736275</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit final - Projeto Entregue">
+      <created>1636155380080</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1636155380080</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,6 +694,11 @@
           <url>file://$PROJECT_DIR$/interface-app/src/main/webapp/process/autor/autor-delete.jsp</url>
           <line>7</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/live/src/main/java/com/dio/live/live/service/AutorService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

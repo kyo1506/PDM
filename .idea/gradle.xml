@@ -4,6 +4,7 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/DM20212N" />
         <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/Gradle" />
@@ -13,8 +14,10 @@
             <option value="$PROJECT_DIR$/DM20212N" />
           </set>
         </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/interface-app" />
         <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/Gradle" />
@@ -24,8 +27,10 @@
             <option value="$PROJECT_DIR$/interface-app" />
           </set>
         </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/live" />
         <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/Gradle" />
@@ -35,6 +40,7 @@
             <option value="$PROJECT_DIR$/live" />
           </set>
         </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

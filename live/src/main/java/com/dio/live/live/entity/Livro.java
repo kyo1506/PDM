@@ -1,19 +1,11 @@
 package com.dio.live.live.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.*;
 
-import javax.persistence.Id;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Column;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.persistence.JoinTable;
-import javax.persistence.JoinColumn;
-import javax.persistence.CascadeType;
+import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Getter
 @Setter
@@ -23,18 +15,14 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name = "livro")
+@JsonPropertyOrder({"id", "nome"})
 public class Livro implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", updatable = false, nullable = false)
+    @JsonProperty("id")
     private Long id;
     @Column(name = "nome", nullable = false)
+    @JsonProperty("nome")
     private String nome;
-    @ManyToMany(targetEntity = Autor.class, cascade = {CascadeType.PERSIST, CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH} )
-    @JoinTable(
-            name="livro_autores",
-            joinColumns=
-            @JoinColumn( name="livro_id", referencedColumnName="id"),
-            inverseJoinColumns=@JoinColumn(name="autor_id", referencedColumnName="id"))
-    private List<Autor> autores;
 }
